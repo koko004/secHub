@@ -19,8 +19,6 @@ def main():
 	if os.name != "nt":
 		if os.getuid() == 0:
 			os.system("git clone https://github.com/koko004/secHub.git /usr/share/sechub")
-			for i in ["termcolor", "datetime"]:
-				pip.main(["install", i])
 			
 			file = open("/usr/bin/sechub", "w")
 			file.write(content)
